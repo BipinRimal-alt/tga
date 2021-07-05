@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const adminSchema = new Schema(
+const trainernSchema = new Schema(
   {
     username: {
       type: string,
@@ -10,12 +10,15 @@ const adminSchema = new Schema(
     password: {
       string,
     },
+    clients: {
+      array,
+    },
   },
   {
     timestamps: true,
   }
 );
 
-const Admin = mongoose.model("Admin", adminSchema);
+const Trainer = mongoose.model("Trainer", trainerSchema);
 
-module.exports = Admin;
+module.exports = Trainer;
