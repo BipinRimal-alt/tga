@@ -6,10 +6,16 @@ const adminSchema = new Schema(
   {
     username: {
       type: string,
+      required: true,
     },
     password: {
-      string,
+      type: string,
+      required: true
     },
+    role: {
+      type: string,
+      required: true
+    }
   },
   {
     timestamps: true,

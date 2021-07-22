@@ -2,16 +2,16 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const trainernSchema = new Schema(
+const trainerSchema = new Schema(
   {
     username: {
       type: string,
     },
     password: {
-      string,
+      type: string,
     },
     clients: {
-      array,
+      type: Array,
     },
   },
   {
