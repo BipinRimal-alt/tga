@@ -1,27 +1,37 @@
 const express = require("express");
 const cors = require("cors");
 const mongoose = require("mongoose");
-const router = require("./routes/routes");
-
+const authRoutes = require("./routes/authRoutes");
 require("dotenv").config();
-
 const app = express();
+const cookieParser = require("cookie-parser");
+
+app.use(express.json());
+app.use(cookieParser());
+
+app.use(express.static("public"));
+
+// view engine
+app.set("view engine", "ejs");
+
 const port = process.env.PORT || 5000;
 
 const uri = process.env.ATLAS_URI;
 
-mongoose.connect(uri, {
-  useNewUrlParser: true,
-  useCreateIndex: true,
-  useUnifiedTopology: true,
-});
-const connection = mongoose.connection;
-connection.once("open", () => {
-  console.log("MongoDB database connection established successfully");
-});
+mongoose
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+  })
+  .then((result) =>
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port} with MongoDb`);
+    })
+  )
+  .catch((err) => console.log(err));
 
-app.use("/", router);
-
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
-});
+// routes
+app.use("/api/", authRoutes);
+app.get("/", (req, res) => res.render("home"));
+app.get("/workouts", (req, res) => res.render("workouts"));

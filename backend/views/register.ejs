@@ -1,0 +1,48 @@
+<%- include('partials/header'); -%>
+
+<form>
+  <h2>Register</h2>
+  <label for="email">Email</label>
+  <input type="text" name="email" required />
+  <div class="email error"></div>
+
+  <label for="password">Password</label>
+  <input type="password" name="password" required />
+  <div class="password error"></div>
+
+  <label for="name">Full Name</label>
+  <input type="text" name="name" required />
+  <div class="name error"></div>
+
+  <label for="number">Number</label>
+  <input type="text" name="number" required />
+  <div class="number error"></div>
+
+  <button>Register</button>
+</form>
+
+<script>
+  const form = document.querySelector("form");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const email = form.email.value;
+    const password = form.password.value;
+    const name = form.name.value;
+    const contact_no = form.number.value;
+
+    try {
+      const res = await fetch("/api/register", {
+        method: "POST",
+        body: JSON.stringify({ email, password, name, contact_no }),
+        headers: { "Content-Type": "application/json" },
+      });
+      const data = await res.json();
+
+      console.log(data);
+    } catch (err) {
+      console.log(err);
+    }
+  });
+</script>
+<%- include('partials/footer'); -%>

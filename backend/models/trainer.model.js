@@ -5,10 +5,10 @@ const Schema = mongoose.Schema;
 const trainerSchema = new Schema(
   {
     username: {
-      type: string,
+      type: String,
     },
     password: {
-      type: string,
+      type: String,
     },
     clients: {
       type: Array,

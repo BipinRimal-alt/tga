@@ -5,17 +5,17 @@ const Schema = mongoose.Schema;
 const adminSchema = new Schema(
   {
     username: {
-      type: string,
+      type: String,
       required: true,
     },
     password: {
-      type: string,
-      required: true
+      type: String,
+      required: true,
     },
     role: {
-      type: string,
-      required: true
-    }
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,
