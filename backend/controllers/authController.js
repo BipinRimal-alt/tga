@@ -38,11 +38,11 @@ const createToken = (id) => {
   });
 };
 
-module.exports.register_get = async (req, res) => {
+module.exports.register_get = (req, res) => {
   res.render("register");
 };
 
-module.exports.login_get = async (req, res) => {
+module.exports.login_get = (req, res) => {
   res.render("login");
 };
 
@@ -74,6 +74,7 @@ module.exports.login_post = async (req, res) => {
   }
 };
 
-module.exports.logout = async (req, res) => {
-  res.render("logout");
+module.exports.logout_get = (req, res) => {
+  res.cookie("jwt", "", { maxAge: 1 });
+  res.redirect("/");
 };
