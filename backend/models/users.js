@@ -29,6 +29,9 @@ const userSchema = new Schema(
       type: mongoose.Types.ObjectId,
       ref: "trainningProgram",
     },
+    program: {
+      type: String,
+    },
     required: false,
   },
   {

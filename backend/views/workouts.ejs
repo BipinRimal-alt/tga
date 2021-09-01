@@ -1,36 +1,414 @@
 <%- include('partials/header'); -%>
-
-<ul class="recipes">
-  <li class="recipe">
-    <img src="/smoothie.png" alt="smoothie recipe icon">
-    <h4>Banana Boost</h4>
-    <p>Banana, Vanilla ice cream, Milk</p>
-  </li>
-  <li class="recipe">
-    <img src="/smoothie.png" alt="smoothie recipe icon">
-    <h4>Tropical Twist</h4>
-    <p>Peach, Pinapple, Apple juice</p>
-  </li>
-  <li class="recipe">
-    <img src="/smoothie.png" alt="smoothie recipe icon">
-    <h4>Protein Packer</h4>
-    <p>Oats, Peanut butter, Milk, Banana, Blueberries</p>
-  </li>
-  <li class="recipe">
-    <img src="/smoothie.png" alt="smoothie recipe icon">
-    <h4>Banana Boost</h4>
-    <p>Banana, Vanilla ice cream, Milk</p>
-  </li>
-  <li class="recipe">
-    <img src="/smoothie.png" alt="smoothie recipe icon">
-    <h4>Tropical Twist</h4>
-    <p>Peach, Pinapple, Apple juice</p>
-  </li>
-  <li class="recipe">
-    <img src="/smoothie.png" alt="smoothie recipe icon">
-    <h4>Protein Packer</h4>
-    <p>Oats, Peanut butter, Milk, Banana, Blueberries</p>
-  </li>
+<h1>Your <%= user.program %> workout, Mr. <%= user.name %></h1>
+<ul>
+  <% if (user.program =="pushpull") { %>
+  <ul class="recipes">
+    <li class="recipe">
+      <img src="/smoothie.png" alt="smoothie recipe icon" />
+      <h4>Day-1</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Decline Dumbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Floor Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Seated Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Lateral Raise</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Tricep Overhead Extension</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+      </table>
+    </li>
+    <li class="recipe">
+      <img src="/smoothie.png" alt="smoothie recipe icon" />
+      <h4>Day-2</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Dumbbell Bent Over Row</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Chest Supported Dumbbell Row</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Pull Over</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Rear Delt Fly</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bicep Curl</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Zottman Curl</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+      </table>
+    </li>
+    <li class="recipe">
+      <img src="/smoothie.png" alt="smoothie recipe icon" />
+      <h4>Day-3</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Decline Dumbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Floor Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Seated Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Lateral Raise</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Tricep Overhead Extension</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+      </table>
+    </li>
+    <li class="recipe">
+      <img src="/smoothie.png" alt="smoothie recipe icon" />
+      <h4>Day-4</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Decline Dumbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Floor Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Seated Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Lateral Raise</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Tricep Overhead Extension</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+      </table>
+    </li>
+    <li class="recipe">
+      <img src="/smoothie.png" alt="smoothie recipe icon" />
+      <h4>Day-5</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Decline Dumbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Floor Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Seated Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Lateral Raise</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Tricep Overhead Extension</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+      </table>
+    </li>
+    <li class="recipe">
+      <img src="/smoothie.png" alt="smoothie recipe icon" />
+      <h4>Day-6</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Decline Dumbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Floor Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Seated Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Lateral Raise</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Tricep Overhead Extension</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+  <% } %> <% if (user.program =="fullbody") { %>
+  <ul class="recipes">
+    <li class="recipe">
+      <img src="/smoothie.png" alt="smoothie recipe icon" />
+      <h4>Day-1</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Dumbbell Squat</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Stiff Legged Deadlift</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Bent Over Dumbbell Row</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Bench Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Lateral Raises</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Standing Dumbbell Curl</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Lying Dumbbell Extension</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+      </table>
+    </li>
+    <li class="recipe">
+      <img src="/smoothie.png" alt="smoothie recipe icon" />
+      <h4>Day-2</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Dumbbell Hamstring Curl</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Lunge</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Deadlift</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Military Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Flys</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Hammer Curl</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Seated Dumbbell Extension</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+      </table>
+    </li>
+    <li class="recipe">
+      <img src="/smoothie.png" alt="smoothie recipe icon" />
+      <h4>Day-3</h4>
+      <table style="width: 100%">
+        <tr>
+          <th>Exercise</th>
+          <th>Sets</th>
+          <th>Reps</th>
+        </tr>
+        <tr>
+          <td>Dumbbell Step Up</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Stiff Legged Deadlift</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>One Arm Dumbbell Row</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Reverse Grip Dumbbell Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Dumbbell Rear Delt Fly</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+        <tr>
+          <td>Close Grip Dumbbell Press</td>
+          <td>5</td>
+          <td>8-12</td>
+        </tr>
+      </table>
+    </li>
+  </ul>
+  <% } %> <% if (user.program !="fullbody" && user.program !="pushpull" ) { %>
+  <h1>Your trainer has not set a program for you. Contact your trainer</h1>
+  <h1><%= user.program%> %></h1>
 </ul>
 
-<%- include('partials/footer'); -%>
+<% } %> <%- include('partials/footer'); -%>
